@@ -1,3 +1,5 @@
+# Code explained here: https://coderslegacy.com/python/pygame-tutorial-part-3/
+
 #Imports
 import pygame, sys
 from pygame.locals import *

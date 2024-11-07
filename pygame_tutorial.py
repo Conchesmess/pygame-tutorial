@@ -1,3 +1,5 @@
+# Code description: https://coderslegacy.com/python/python-pygame-tutorial/
+
 import pygame, sys
 from pygame.locals import *
 import random
