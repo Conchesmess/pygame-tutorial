@@ -124,8 +124,6 @@ while True:
          
     pygame.display.update()
     FramePerSec.tick(FPS)
-Now Playing
-
 
 
 
