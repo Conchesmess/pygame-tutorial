@@ -43,6 +43,7 @@ class Enemy(pygame.sprite.Sprite):
         super().__init__() 
         self.image = pygame.image.load("Enemy.png")
         self.rect = self.image.get_rect()
+        # place the enemy on the screen wuth center at random x and y = 0
         self.rect.center = (random.randint(40, SCREEN_WIDTH-40), 0)  
  
     # The enemy moves continuously from the top to the bottom
@@ -75,6 +76,7 @@ class Player(pygame.sprite.Sprite):
         pressed_keys = pygame.key.get_pressed()
     
         # You can use this code to move the player up and down
+        # check how the code below keeps the sprite from going off the to the screen left or right
         #if pressed_keys[K_UP]:
             #self.rect.move_ip(0, -5)
         #if pressed_keys[K_DOWN]:
@@ -89,11 +91,11 @@ class Player(pygame.sprite.Sprite):
               if pressed_keys[K_RIGHT]:
                   self.rect.move_ip(5, 0)
                    
-#Setting up Sprites        
+#Create the Sprites        
 P1 = Player()
 E1 = Enemy()
  
-#Creating Sprites Groups
+#Put the Sprites into Groups
 enemies = pygame.sprite.Group()
 enemies.add(E1)
 all_sprites = pygame.sprite.Group()
