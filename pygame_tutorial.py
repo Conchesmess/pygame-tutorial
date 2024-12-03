@@ -104,17 +104,19 @@ all_sprites = pygame.sprite.Group()
 all_sprites.add(P1)
 all_sprites.add(E1)
  
-#Adding a new User event 
-INC_SPEED = pygame.USEREVENT + 1
-pygame.time.set_timer(INC_SPEED, 1000)
+# Adding a new User event that runs once every second
+EVERY_SEC = pygame.USEREVENT + 1
+# this creates an event that runs once every sec (1000 mili seconds)
+pygame.time.set_timer(EVERY_SEC, 1000)
  
 #Game Loop
 while True:
        
-    #Cycles through all events occurring  
+    # Cycles through all events occurring  
     for event in pygame.event.get():
-        if event.type == INC_SPEED:
-              SPEED += 0.5     
+        if event.type == EVERY_SEC:
+            # if the EVERY_SEC event is running increase the speed
+            SPEED += 0.5
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
